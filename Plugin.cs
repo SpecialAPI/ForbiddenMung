@@ -19,8 +19,7 @@ namespace ForbiddenMung
 
         public void Awake()
         {
-            var m = ProfileManager.RegisterMod();
-            m.SetGuidAndPrefix(GUID, PREFIX);
+            var m = ProfileManager.RegisterMod(GUID, PREFIX);
 
             var ffM = PassiveBuilder.NewPassive<MultiCustomTriggerEffectPassive>("ForbiddenFruit_Mung_PA", PassiveType_GameIDs.ForbiddenFruit.ToString())
                 .SetBasicInformation("Forbidden Fruit", Passives.ForbiddenFruitInHerImage.passiveIcon)
